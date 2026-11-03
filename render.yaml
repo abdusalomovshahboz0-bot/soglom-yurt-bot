@@ -1,0 +1,22 @@
+# Render.com uchun sozlamalar (Blueprint).
+# Bu fayl orqali bot bepul tarifda, kartasiz joylashtiriladi.
+services:
+  - type: web
+    name: soglom-yurt-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      # Quyidagilar Render panelida qo'lda kiritiladi (maxfiy ma'lumotlar).
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: MAJBURIY_KANAL
+        sync: false
+      - key: KANAL_HAVOLASI
+        sync: false
