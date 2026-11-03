@@ -1,0 +1,14 @@
+# Portativ Python muhiti (GitHub ga yuklanmaydi — juda katta)
+python/
+
+# Maxfiy ma'lumotlar
+.env
+
+# Ma'lumotlar bazasi va jurnallar
+*.db
+bot_jurnal.txt
+kanal_id.txt
+
+# Python keshi
+__pycache__/
+*.pyc
